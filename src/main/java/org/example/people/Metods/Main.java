@@ -3,6 +3,8 @@ package org.example.people.Metods;
 import org.example.people.Class.*;
 import org.example.people.ENAM.Brand;
 import org.example.people.ENAM.Color;
+import org.example.people.ENAM.Country;
+import org.example.people.ENAM.Currency;
 
 public class Main {
     public static void main(String[] args) {
@@ -42,69 +44,72 @@ public class Main {
 //        Account[] accounts = {account, account1, account2, account3, account4, account5};
 
 
-        FindAverageSalaryInCountry.averageSalary(People.PeopleOfUSA());
-        FindAverageSalaryInCountry.averageSalary(People.PeopleOfUK());
+//        FindAverageSalaryInCountry.averageSalary(People.peopleOfUSA());
+        FindAverageSalaryInCountry.averageSalary(People.peopleOfGermany());
+        FindAverageSalaryInCountry.averageSalary(People.peopleOfUK());
+        FindAverageSalaryInCountry.averageSalary(People.peopleOfFrance());
+        FindAverageSalaryInCountry.averageSalary(People.peopleOfUSA());
 //
-//        IsRedIsSport.IsNotRedNotSport(People.PeopleOfUSA());
-//        IsRedIsSport.IsNotRedNotSport(People.PeopleOfUK());
+//        IsRedIsSport.IsNotRedNotSport(People.peopleOfUSA());
+//        IsRedIsSport.IsNotRedNotSport(People.peopleOfUK());
+
+////        PrintPeopleWithBalanceOver.peopleWithBalanceOver(People.peopleOfUSA(), Currency.USD,1000000);
+////        PrintPeopleWithBalanceOver.peopleWithBalanceOver(People.peopleOfUK(),Currency.GBR,100000);
+////
+////        PrintPeopleWithOlderCars.PeopleWithOlderCars(People.peopleOfUSA(),2022);
+////        PrintPeopleWithOlderCars.PeopleWithOlderCars(People.peopleOfFrance(),2000);
+////        PrintPeopleWithOlderCars.PeopleWithOlderCars(People.peopleOfUK(),2024);
 //
-//        PrintPeopleWithBalanceOver.peopleWithBalanceOver(People.PeopleOfUK(),Currency.GBR,1000000);
-//        PrintPeopleWithBalanceOver.peopleWithBalanceOver(People.PeopleOfUSA(),Currency.USD,100000);
-//
-//        PrintPeopleWithOlderCars.PeopleWithOlderCars(People.PeopleOfUSA(),2022);
-//        PrintPeopleWithOlderCars.PeopleWithOlderCars(People.PeopleOfUSA(),2000);
-//        PrintPeopleWithOlderCars.PeopleWithOlderCars(People.PeopleOfUK(),2024);
 //
 //
-
-        System.out.println("Количество людей с мощными спортивными автомобилями: " +
-                CountPeopleWithPowerfulSportsCars.PeopleWithPowerfulSportsCars(People.PeopleOfUSA()));
-
-        System.out.println("Количество людей с мощными спортивными автомобилями: " +
-                CountPeopleWithPowerfulSportsCars.PeopleWithPowerfulSportsCars(People.PeopleOfUK()));
-
-        PrintPeopleWithMostPowerfulCars.peopleWithMostPowerfulCars(People.PeopleOfUK());
-        PrintPeopleWithMostPowerfulCars.peopleWithMostPowerfulCars(People.PeopleOfUSA());
-
-        PrintPeopleLivingInHousesEndingWith1.peopleLivingInHousesEndingWith1(People.PeopleOfUSA());
-        PrintPeopleLivingInHousesEndingWith1.peopleLivingInHousesEndingWith1(People.PeopleOfUK());
-
-        PrintPeopleWithSpecificCar.peopleWithSpecificCar(People.PeopleOfUK(), Brand.BMW, Color.WIETE);
-        PrintPeopleWithSpecificCar.peopleWithSpecificCar(People.PeopleOfUK(), Brand.MERCEDES, Color.WIETE);
-        PrintPeopleWithSpecificCar.peopleWithSpecificCar(People.PeopleOfUK(), Brand.MERCEDES, Color.BLACK);
-
-        PrintPeopleWithAboveAverageSalary.peopleWithAboveAverageSalary(People.PeopleOfUSA());
-        PrintPeopleWithAboveAverageSalary.peopleWithAboveAverageSalary(People.PeopleOfUK());
-
-        PrintPersonWithHighestBalance.personWithHighestBalance(People.PeopleOfUSA());
-        PrintPersonWithHighestBalance.personWithHighestBalance(People.PeopleOfUK());
-
-        PrintPeopleWithNewCars.peopleWithNewCars(People.PeopleOfUK());
-        PrintPeopleWithNewCars.peopleWithNewCars(People.PeopleOfUSA());
-
-        PrintPeopleWithSpecificColorNonSportCars.peopleWithSpecificColorNonSportCars(People.PeopleOfUSA(),Color.WIETE);
-        PrintPeopleWithSpecificColorNonSportCars.peopleWithSpecificColorNonSportCars(People.PeopleOfUSA(),Color.BLACK);
-        PrintPeopleWithSpecificColorNonSportCars.peopleWithSpecificColorNonSportCars(People.PeopleOfUSA(),Color.RED);
-
-
-        PrintPeopleWithCarsCostingMoreThan.peopleWithCarsCostingMoreThan(People.PeopleOfUSA(),15000);
-        PrintPeopleWithCarsCostingMoreThan.peopleWithCarsCostingMoreThan(People.PeopleOfUK(),15000);
-
-        PrintPeopleWithEvenDoorsCars.peopleWithEvenDoorsCars(People.PeopleOfUK());
-        PrintPeopleWithEvenDoorsCars.peopleWithEvenDoorsCars(People.PeopleOfUSA());
-
-        PrintPersonWithLowestBalance.personWithLowestBalance(People.PeopleOfUSA());
-        PrintPersonWithLowestBalance.personWithLowestBalance(People.PeopleOfUK());
-
-        PrintPeopleWithCarsCostingMoreThanSalary.peopleWithCarsCostingMoreThanSalary(People.PeopleOfUK());
-        PrintPeopleWithCarsCostingMoreThanSalary.peopleWithCarsCostingMoreThanSalary(People.PeopleOfUSA());
-
-        PrintPeopleWithSameCarBrandAsFirstPerson.peopleWithSameCarBrandAsFirstPerson(People.PeopleOfUK());
-        PrintPeopleWithSameCarBrandAsFirstPerson.peopleWithSameCarBrandAsFirstPerson(People.PeopleOfUSA());
-
-
-
-
+//        System.out.println("Количество людей с мощными спортивными автомобилями: " +
+//                CountPeopleWithPowerfulSportsCars.PeopleWithPowerfulSportsCars(People.peopleOfUSA()));
+//
+//        System.out.println("Количество людей с мощными спортивными автомобилями: " +
+//                CountPeopleWithPowerfulSportsCars.PeopleWithPowerfulSportsCars(People.peopleOfUK()));
+//
+//        PrintPeopleWithMostPowerfulCars.peopleWithMostPowerfulCars(People.peopleOfUK());
+//        PrintPeopleWithMostPowerfulCars.peopleWithMostPowerfulCars(People.peopleOfUSA());
+//
+//        PrintPeopleLivingInHousesEndingWith1.peopleLivingInHousesEndingWith1(People.peopleOfUSA());
+//        PrintPeopleLivingInHousesEndingWith1.peopleLivingInHousesEndingWith1(People.peopleOfUK());
+//
+//        PrintPeopleWithSpecificCar.peopleWithSpecificCar(People.peopleOfUK(), Brand.BMW, Color.WIETE);
+//        PrintPeopleWithSpecificCar.peopleWithSpecificCar(People.peopleOfUK(), Brand.MERCEDES, Color.WIETE);
+//        PrintPeopleWithSpecificCar.peopleWithSpecificCar(People.peopleOfUK(), Brand.MERCEDES, Color.BLACK);
+//
+//        PrintPeopleWithAboveAverageSalary.peopleWithAboveAverageSalary(People.peopleOfUSA());
+//        PrintPeopleWithAboveAverageSalary.peopleWithAboveAverageSalary(People.peopleOfUK());
+//
+//        PrintPersonWithHighestBalance.personWithHighestBalance(People.peopleOfUSA());
+//        PrintPersonWithHighestBalance.personWithHighestBalance(People.peopleOfUK());
+//
+//        PrintPeopleWithNewCars.peopleWithNewCars(People.peopleOfUK());
+//        PrintPeopleWithNewCars.peopleWithNewCars(People.peopleOfUSA());
+//
+//        PrintPeopleWithSpecificColorNonSportCars.peopleWithSpecificColorNonSportCars(People.peopleOfUSA(),Color.WIETE);
+//        PrintPeopleWithSpecificColorNonSportCars.peopleWithSpecificColorNonSportCars(People.peopleOfUSA(),Color.BLACK);
+//        PrintPeopleWithSpecificColorNonSportCars.peopleWithSpecificColorNonSportCars(People.peopleOfUSA(),Color.RED);
+//
+//
+//        PrintPeopleWithCarsCostingMoreThan.peopleWithCarsCostingMoreThan(People.peopleOfUSA(),15000);
+//        PrintPeopleWithCarsCostingMoreThan.peopleWithCarsCostingMoreThan(People.peopleOfUK(),15000);
+//
+//        PrintPeopleWithEvenDoorsCars.peopleWithEvenDoorsCars(People.peopleOfUK());
+//        PrintPeopleWithEvenDoorsCars.peopleWithEvenDoorsCars(People.peopleOfUSA());
+//
+//        PrintPersonWithLowestBalance.personWithLowestBalance(People.peopleOfUSA());
+//        PrintPersonWithLowestBalance.personWithLowestBalance(People.peopleOfUK());
+//
+//        PrintPeopleWithCarsCostingMoreThanSalary.peopleWithCarsCostingMoreThanSalary(People.peopleOfUK());
+//        PrintPeopleWithCarsCostingMoreThanSalary.peopleWithCarsCostingMoreThanSalary(People.peopleOfUSA());
+//
+//        PrintPeopleWithSameCarBrandAsFirstPerson.peopleWithSameCarBrandAsFirstPerson(People.peopleOfUK());
+//        PrintPeopleWithSameCarBrandAsFirstPerson.peopleWithSameCarBrandAsFirstPerson(People.peopleOfUSA());
+//
+//
+//
+//
 
 
     }

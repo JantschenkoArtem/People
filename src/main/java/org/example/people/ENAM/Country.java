@@ -6,4 +6,5 @@ public enum Country {
     UK,
     FRANCE,
     CANADA;
+
 }

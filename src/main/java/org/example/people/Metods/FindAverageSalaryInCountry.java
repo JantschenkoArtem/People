@@ -1,6 +1,5 @@
 package org.example.people.Metods;
 
-import org.example.people.Class.People;
 import org.example.people.Class.Person;
 import org.example.people.ENAM.Country;
 
@@ -9,13 +8,21 @@ import org.example.people.ENAM.Country;
  */
 public class FindAverageSalaryInCountry {
 
-    public static int averageSalary(Person[] people) {
+    public static double averageSalary(Person[] people) {
 
-        int totalSalary = 0;
-        for (int i = 0; i < people.length; i++) {
-            totalSalary += people[i].getSalary();
+
+        double totalSalary = 0;
+        int count = 0;
+        double averageSalary = 0;
+        Country country = null;
+        for (Person person : people) {
+            totalSalary += person.getSalary();
+            count++;
+            country = person.getAddress().getCountry();
+            averageSalary = totalSalary / count;
         }
-        System.out.println("averageSalary= " + totalSalary / people.length + 1);
-        return totalSalary;
+        System.out.println("Средняя зарплата в " + country + " = " + averageSalary);
+
+        return averageSalary;
     }
 }
