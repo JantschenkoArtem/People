@@ -82,6 +82,17 @@ public class Main {
         PrintPeopleWithNewCars.peopleWithNewCars(People.PeopleOfUK());
         PrintPeopleWithNewCars.peopleWithNewCars(People.PeopleOfUSA());
 
+        PrintPeopleWithSpecificColorNonSportCars.peopleWithSpecificColorNonSportCars(People.PeopleOfUSA(),Color.WIETE);
+        PrintPeopleWithSpecificColorNonSportCars.peopleWithSpecificColorNonSportCars(People.PeopleOfUSA(),Color.BLACK);
+        PrintPeopleWithSpecificColorNonSportCars.peopleWithSpecificColorNonSportCars(People.PeopleOfUSA(),Color.RED);
+
+
+        PrintPeopleWithCarsCostingMoreThan.peopleWithCarsCostingMoreThan(People.PeopleOfUSA(),15000);
+        PrintPeopleWithCarsCostingMoreThan.peopleWithCarsCostingMoreThan(People.PeopleOfUK(),15000);
+
+        PrintPeopleWithEvenDoorsCars.peopleWithEvenDoorsCars(People.PeopleOfUK());
+        PrintPeopleWithEvenDoorsCars.peopleWithEvenDoorsCars(People.PeopleOfUSA());
+
     }
 
 

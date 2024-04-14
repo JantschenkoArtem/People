@@ -26,14 +26,14 @@ public class Main {
         Address address13 = new Address(Country.FRANCE, "Wall Street", 4, 2);
         Address[] addresses = {address, address2, address3, address4, address5, address6, address7, address8, address9, address10, address11, address12, address13};
 
-        Car car = new Car(Brand.BMW, 2, true, 500, 2022, Color.BLACK);
-        Car car1 = new Car(Brand.BMW, 4, false, 200, 2020, Color.RED);
-        Car car2 = new Car(Brand.BMW, 4, true, 400, 2022, Color.RED);
-        Car car3 = new Car(Brand.MERCEDES, 4, true, 600, 2010, Color.BLACK);
-        Car car4 = new Car(Brand.MERCEDES, 4, true, 600, 1980, Color.WIETE);
-        Car car5 = new Car(Brand.LADA, 4, false, 100, 2022, Color.RED);
-        Car car6 = new Car(Brand.MAZDA, 2, true, 400, 2021, Color.WIETE);
-        Car car7 = new Car(Brand.TOYOTA, 4, false, 350, 2024, Color.BLU);
+        Car car = new Car(Brand.BMW, 2, true, 500, 2022, Color.BLACK,10000);
+        Car car1 = new Car(Brand.BMW, 4, false, 200, 2020, Color.RED,20000);
+        Car car2 = new Car(Brand.BMW, 4, true, 400, 2022, Color.RED,15000);
+        Car car3 = new Car(Brand.MERCEDES, 4, true, 600, 2010, Color.BLACK,50000);
+        Car car4 = new Car(Brand.MERCEDES, 4, true, 600, 1980, Color.WIETE,50000);
+        Car car5 = new Car(Brand.LADA, 4, false, 100, 2022, Color.RED,1000);
+        Car car6 = new Car(Brand.MAZDA, 2, true, 400, 2021, Color.WIETE,30000);
+        Car car7 = new Car(Brand.TOYOTA, 4, false, 350, 2024, Color.BLU,10000);
         Car[] cars = {car, car1, car2, car3, car4, car5, car6, car7};
 
 

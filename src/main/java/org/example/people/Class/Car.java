@@ -21,15 +21,24 @@ public class Car {
     private int power;
     private int yearOfManufacture;
     private Color color;
+    private int price;
 
-    public Car(Brand brand, int doors, boolean isSport, int power, int yearOfManufacture, Color color) {
-
+    public Car(Brand brand, int doors, boolean isSport, int power, int yearOfManufacture, Color color,int price) {
+        this.price=price;
         this.brand = brand;
         this.doors = doors;
         this.isSport = isSport;
         this.power = power;
         this.yearOfManufacture = yearOfManufacture;
         this.color = color;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public int getPrice() {
+        return price;
     }
 
     public Brand getBrand() {
