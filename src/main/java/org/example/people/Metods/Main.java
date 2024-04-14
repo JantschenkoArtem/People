@@ -96,6 +96,17 @@ public class Main {
         PrintPersonWithLowestBalance.personWithLowestBalance(People.PeopleOfUSA());
         PrintPersonWithLowestBalance.personWithLowestBalance(People.PeopleOfUK());
 
+        PrintPeopleWithCarsCostingMoreThanSalary.peopleWithCarsCostingMoreThanSalary(People.PeopleOfUK());
+        PrintPeopleWithCarsCostingMoreThanSalary.peopleWithCarsCostingMoreThanSalary(People.PeopleOfUSA());
+
+        PrintPeopleWithSameCarBrandAsFirstPerson.peopleWithSameCarBrandAsFirstPerson(People.PeopleOfUK());
+        PrintPeopleWithSameCarBrandAsFirstPerson.peopleWithSameCarBrandAsFirstPerson(People.PeopleOfUSA());
+
+
+
+
+
+
     }
 
 
