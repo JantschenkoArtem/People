@@ -93,6 +93,9 @@ public class Main {
         PrintPeopleWithEvenDoorsCars.peopleWithEvenDoorsCars(People.PeopleOfUK());
         PrintPeopleWithEvenDoorsCars.peopleWithEvenDoorsCars(People.PeopleOfUSA());
 
+        PrintPersonWithLowestBalance.personWithLowestBalance(People.PeopleOfUSA());
+        PrintPersonWithLowestBalance.personWithLowestBalance(People.PeopleOfUK());
+
     }
 
 
