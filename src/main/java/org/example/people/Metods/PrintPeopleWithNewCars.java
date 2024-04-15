@@ -4,12 +4,13 @@ import org.example.people.Class.Car;
 import org.example.people.Class.Person;
 
 import java.time.Year;
+import java.util.List;
 
 /**
  * список лиц, чьи автомобили были куплены новыми (год выпуска авто равен текущему году)
  */
 public class PrintPeopleWithNewCars {
-    public static void peopleWithNewCars(Person[] people) {
+    public static void peopleWithNewCars(List<Person> people) {
 
         //int currentYear=Year.now().getValue() ;
 

@@ -3,8 +3,10 @@ package org.example.people.Metods;
 import org.example.people.Class.Car;
 import org.example.people.Class.Person;
 
+import java.util.List;
+
 public class PrintPeopleWithMostPowerfulCars {
-    public static void peopleWithMostPowerfulCars(Person[] people) {
+    public static void peopleWithMostPowerfulCars(List<Person> people) {
         Person mostPowerSportCar = null;
         Person mostPowerNotSportCar = null;
         int maxPowerSport = 0;
@@ -19,9 +21,11 @@ public class PrintPeopleWithMostPowerfulCars {
                 mostPowerNotSportCar = person;
             }
         }
+        assert mostPowerSportCar != null;
         System.out.println("Самый мощный спортивный автомобиль у: "
                 + mostPowerSportCar.getFirstName()
                 + " " + mostPowerSportCar.getLastName());
+        assert mostPowerNotSportCar != null;
         System.out.println("Самый мощный неспортивный автомобиль у: "
                 + mostPowerNotSportCar.getFirstName()
                 + " " + mostPowerNotSportCar.getLastName());

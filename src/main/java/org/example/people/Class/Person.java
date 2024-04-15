@@ -1,5 +1,7 @@
 package org.example.people.Class;
 
+import java.util.List;
+
 /**
  * Создать класс Person.
  * Поля:
@@ -16,9 +18,9 @@ public class Person {
     private Address address;
     private int salary;
     private Car car;
-    private Account []accounts;
+    private List<Account> accounts;
 
-    public Person(String firstName, String lastName, Address address, int salary, Car car, Account[] accounts) {
+    public Person(String firstName, String lastName, Address address, int salary, Car car, List<Account> accounts) {
 
         this.firstName = firstName;
         this.lastName = lastName;
@@ -68,11 +70,11 @@ public class Person {
         this.car = car;
     }
 
-    public Account[] getAccounts() {
+    public List<Account> getAccounts() {
         return accounts;
     }
 
-    public void setAccounts(Account[] accounts) {
+    public void setAccounts(List<Account>accounts) {
         this.accounts = accounts;
     }
 }

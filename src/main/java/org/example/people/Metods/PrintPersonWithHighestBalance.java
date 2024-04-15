@@ -3,16 +3,18 @@ package org.example.people.Metods;
 import org.example.people.Class.Account;
 import org.example.people.Class.Person;
 
+import java.util.List;
+
 /**
  Определить лиц с наибольшим балансом на счету.
  *
  */
 public class PrintPersonWithHighestBalance {
-    public static void personWithHighestBalance(Person[]people){
+    public static void personWithHighestBalance(List<Person>people){
         Person richestPerson=null;
         double maxBalance=0;
         for (Person person:people){
-            Account[]accounts=person.getAccounts();
+            List<Account>accounts=person.getAccounts();
             if (accounts!=null){
                 for (Account account:accounts){
                     if (account.getBalance()>maxBalance){

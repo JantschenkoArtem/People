@@ -4,13 +4,15 @@ import org.example.people.Class.Car;
 import org.example.people.Class.Person;
 import org.example.people.ENAM.Brand;
 
+import java.util.List;
+
 /**
  * Вывести список лиц, имеющих автомобиль той же марки, что и автомобиль первого лица в массиве.
  */
 public class PrintPeopleWithSameCarBrandAsFirstPerson {
-    public static void peopleWithSameCarBrandAsFirstPerson(Person[]people){
+    public static void peopleWithSameCarBrandAsFirstPerson(List<Person>people){
        for (Person person:people){
-           Person firstPersonCar=people[0];
+           Person firstPersonCar=person;
            Brand firstPersonCarBrand=firstPersonCar.getCar().getBrand();
            Car car=person.getCar();
            if (car.getBrand()==firstPersonCarBrand){

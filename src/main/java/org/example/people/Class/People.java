@@ -5,41 +5,57 @@ import org.example.people.ENAM.Color;
 import org.example.people.ENAM.Country;
 import org.example.people.ENAM.Currency;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class People {
-    public static Person[] peopleOfUSA() {
+    public static List<Person> peopleOfUSA() {
+        ArrayList<Account> accounts=new ArrayList<>();
+        Account account=new Account(Currency.USD,250_000,"ID.16.25");
+        accounts.add(account);
         Person person = new Person("Ivan", "Ivanov", new Address(Country.USA, "Wall Street", 1, 1)
-                , 1200, new Car(Brand.BMW, 2, true, 500, 2024, Color.BLACK, 25000), new Account[]{new Account(Currency.USD, 25000, "ID12.12")});
+                , 1200, new Car(Brand.BMW, 2, true, 500, 2024, Color.BLACK, 25_000),accounts);
         Person person1 = new Person("Anna", "Ivanova", person.getAddress()
-                , 1500, new Car(Brand.BMW, 4, false, 200, 2020, Color.RED, 10000), person.getAccounts());
+                , 1500, new Car(Brand.BMW, 4, false, 200, 2020, Color.RED, 10_000), person.getAccounts());
         Person person2 = new Person("Anton", "Antonov", new Address(Country.USA, "Wall Street", 1, 3), 1500,
-                new Car(Brand.BMW, 4, false, 200, 2020, Color.RED, 15000), new Account[]{new Account(Currency.USD, 500000.5, "ID16.61")});
+                new Car(Brand.BMW, 4, false, 200, 2020, Color.RED, 15_000), accounts);
         Person person3 = new Person("Antonina", "Antonova", person2.getAddress(), 2000, person1.getCar(), person2.getAccounts());
-        Person[] peopleOfUSA = {person, person1, person3};
+        List<Person> peopleOfUSA = Arrays.asList(person,person1,person2,person3);
 
         return peopleOfUSA;
     }
 
 
-    public static Person[] peopleOfUK() {
+    public static List<Person> peopleOfUK() {
+        ArrayList<Account> accounts=new ArrayList<>();
+        Account account=new Account(Currency.GBR,25_000,"ID.16.25");
+        accounts.add(account);
         Person person = new Person("John", "Johnovitsch", new Address(Country.UK, "Backer Street", 2, 1), 2500,
-                new Car(Brand.MERCEDES, 4, true, 600, 2010, Color.BLACK, 50000), new Account[]{new Account(Currency.GBR, 650650, "ID12.12")});
+                new Car(Brand.MERCEDES, 4, true, 600, 2010, Color.BLACK, 50_000),accounts);
         Person person1 = new Person("Johana", "Johnovitsch", person.getAddress(), 500,
                 new Car(Brand.TOYOTA, 4, false, 350, 2024, Color.BLU, 1000), person.getAccounts());
-        Person[] peopleOfUK = {person, person1};
+        List<Person> peopleOfUK = Arrays.asList(person,person1);
         return peopleOfUK;
+        // return Arrays.asList(person,person1);
     }
 
-    public static Person[] peopleOfGermany() {
+    public static List<Person> peopleOfGermany() {
+        ArrayList<Account> accounts=new ArrayList<>();
+        Account account=new Account(Currency.EURO,50_000,"ID.25");
+        accounts.add(account);
         Person person = new Person("Adolf", "Hamman", new Address(Country.GERMANY, "Bussenstr.", 3, 1), 2500,
-                new Car(Brand.MERCEDES, 2, true, 650, 2024, Color.WIETE, 30000), new Account[]{new Account(Currency.EURO, 150000, "ID.166.65")});
+                new Car(Brand.MERCEDES, 2, true, 650, 2024, Color.WIETE, 30_000), accounts);
 
         Person person1 = new Person("Elisabet", "Hamman", new Address(Country.GERMANY, "Bussenstr.", 3, 1), 2500,
-                new Car(Brand.MERCEDES, 2, true, 1000, 2024, Color.BLACK, 30000), new Account[]{new Account(Currency.EURO, 150000, "ID.166.66")});
-        Person[] peopleOfGermany = {person, person1};
-        return peopleOfGermany;
+                new Car(Brand.MERCEDES, 2, true, 1000, 2024, Color.BLACK, 30_000),accounts);
+        return Arrays.asList(person,person1);
     }
 
-    public static Person[] peopleOfFrance() {
+    public static List<Person> peopleOfFrance() {
+        ArrayList<Account> accounts=new ArrayList<>();
+        Account account=new Account(Currency.GBR,10_000,"ID.16");
+        accounts.add(account);
         Person person = new Person("Kruosa", "Timur", new Address(Country.FRANCE, "Lupen", 26, 1), 1000,
                 null, null);
 
@@ -49,7 +65,7 @@ public class People {
                 null, null);
         Person person2 = new Person("Youmen", "Bobo", new Address(Country.FRANCE, "Lupen", 20, 1), 1000,
                 null, null);
-        Person[]peopleOfFrance={person,person1,person2,person3};
+        List<Person> peopleOfFrance=Arrays.asList(person,person1,person2,person3);
         return peopleOfFrance;
     }
 }

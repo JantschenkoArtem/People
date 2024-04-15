@@ -7,8 +7,9 @@ import org.example.people.ENAM.Country;
 import org.example.people.ENAM.Currency;
 
 import java.util.Arrays;
+import java.util.List;
 
-public class Main {
+public class List_Address_Car_Account {
     public static void main(String[] args) {
         Address address = new Address(Country.USA, "Wall Street", 1, 1);
         Address address1 = new Address(Country.USA, "Wall Street", 1, 2);
@@ -24,7 +25,7 @@ public class Main {
         Address address11 = new Address(Country.GERMANY, "BussenStr.", 3, 4);
         Address address12 = new Address(Country.CANADA, "Wall Street", 4, 1);
         Address address13 = new Address(Country.FRANCE, "Wall Street", 4, 2);
-        Address[] addresses = {address, address2, address3, address4, address5, address6, address7, address8, address9, address10, address11, address12, address13};
+        List<Address> addresses =Arrays.asList(address,address1,address2,address3,address4,address5,address6,address7,address8,address9,address10,address11,address12,address13);
 
         Car car = new Car(Brand.BMW, 2, true, 500, 2022, Color.BLACK,10000);
         Car car1 = new Car(Brand.BMW, 4, false, 200, 2020, Color.RED,20000);
@@ -34,7 +35,7 @@ public class Main {
         Car car5 = new Car(Brand.LADA, 4, false, 100, 2022, Color.RED,1000);
         Car car6 = new Car(Brand.MAZDA, 2, true, 400, 2021, Color.WIETE,30000);
         Car car7 = new Car(Brand.TOYOTA, 4, false, 350, 2024, Color.BLU,10000);
-        Car[] cars = {car, car1, car2, car3, car4, car5, car6, car7};
+       List<Car> cars = Arrays.asList(car,car1,car2,car3,car4,car5,car7);
 
 
         Account account=new Account(Currency.USD,25000.99,"ID12.12");
@@ -43,10 +44,10 @@ public class Main {
         Account account3=new Account(Currency.EURO,242500,"ID123456");
         Account account4=new Account(Currency.CAD,40500,"ID999");
         Account account5=new Account(Currency.GBR,650650,"ID12.12");
-        Account[]accounts={account,account1,account2,account3,account4,account5};
+      List<Account>accounts=Arrays.asList(account,account1,account2,account3,account4,account5);
 
-        System.out.println(Arrays.toString(addresses));
-        System.out.println(Arrays.toString(cars));
+        System.out.println(Arrays.toString(new List[]{addresses}));
+        System.out.println(cars);
 
     }
 }
