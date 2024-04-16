@@ -13,7 +13,13 @@ import java.util.List;
 public class PrintPeopleWithBalanceOver {
     public static void peopleWithBalanceOver(List<Person>people, Currency currency, double balance) {
         for (Person person : people) {
+
+
             List<Account>accounts=person.getAccounts();
+            if (accounts==null){
+                System.out.println("Person have not Account: " + person.getFirstName() + " " + person.getLastName());
+            continue;
+            }
             for (Account account : accounts) {
                 if (account.getCurrency() == currency && account.getBalance() > balance) {
                     System.out.println(person.getFirstName() + " " + person.getLastName() +" with balance > " + balance);

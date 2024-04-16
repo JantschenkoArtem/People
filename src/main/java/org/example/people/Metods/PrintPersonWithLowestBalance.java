@@ -14,18 +14,21 @@ public class PrintPersonWithLowestBalance {
         double minBalance=Double.MAX_VALUE;
 
         for (Person person:people){
+
             List<Account>accounts=person.getAccounts();
-            if (accounts!=null){
-                for (Account account:accounts){
-                    if (account.getBalance()<minBalance){
-                        minBalance=account.getBalance();
-                        personWithLowestBalance=person;
-                    }
+        if (accounts==null){
+            System.out.println("Person have not Account: " + person.getFirstName() + " " + person.getLastName());
+            continue;
+        }
+            for (Account account : accounts) {
+                if (account.getBalance() < minBalance) {
+                    minBalance = account.getBalance();
+                    personWithLowestBalance = person;
                 }
             }
-
+            System.out.println("лицо, имеющего счет с наименьшим балансом: " + personWithLowestBalance.getFirstName()
+                    + " " + personWithLowestBalance.getLastName());
         }
-        System.out.println("лицо, имеющего счет с наименьшим балансом: " + personWithLowestBalance.getFirstName()
-                + " " + personWithLowestBalance.getLastName());
+
     }
 }

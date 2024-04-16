@@ -11,7 +11,13 @@ public class PrintPeopleWithMostPowerfulCars {
         Person mostPowerNotSportCar = null;
         int maxPowerSport = 0;
         int maxPowerNotSport = 0;
+
         for (Person person : people) {
+        if (person.getCar()==null){
+            System.out.println("not");
+            continue;
+        }
+
             Car car = person.getCar();
             if (car.isSport() && car.getPower() > maxPowerSport) {
                 maxPowerSport = car.getPower();

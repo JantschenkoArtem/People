@@ -32,7 +32,16 @@ public class IsRedIsSport {
     }
     public static void IsNotRedNotSport(List<Person>people){
         for (Person person:people){
+            if (person.getCar()==null){
+
+                System.out.println("Person have not Car: " + person.getFirstName() + " " + person.getLastName());
+                continue;
+            }
+
             Car car=person.getCar();
+               if (car.getColor()!=Color.RED){
+                   System.out.println("Person have not red Car: " + person.getFirstName() + " " + person.getLastName());
+               }
             if (!car.isSport() && car.getColor()!=Color.RED){
                 System.out.println(person.getFirstName() + " " +
                         person.getLastName() + " have Sport and Red Car ");
