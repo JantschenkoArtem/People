@@ -78,7 +78,7 @@ public class AllMethods {
 
     public static void peopleWithOlderCars(List<Person> people, int year) {
         for (Person person : people) {
-            Car car=person.getCar();
+            Car car = person.getCar();
 
             if (car == null) {
                 System.out.println("Person have Not Car: " + person.getFirstName() + " " + person.getLastName());
@@ -91,17 +91,89 @@ public class AllMethods {
     }
 
     /**
-     Найти лиц, живущих на одной улице, но в разных домах. +
-     *
+     * Найти лиц, живущих на одной улице, но в разных домах. +
      */
-    public static void peopleOfStreet(List<Person>people){
-        String street;
-        int housesNumber;
+    public static void peopleOfStreetBurDifferentHouses(List<Person> people) {
+//        String street;
+//        int housesNumber;
+//        for (Person person : people) {
+//            street=person.getAddress().getStreet();
+//            housesNumber=person.getAddress().getHousesNumber();
+//            if (person.getAddress().getStreet()==street && person.getAddress().getHousesNumber()!=housesNumber){
+//                System.out.println(person.getFirstName());
+//            }
+//        }
+        for (Person person1 : people) {
+            for (Person person2 : people) {
+                if (person1.getAddress().getStreet().equals(person2.getAddress().getStreet())
+                        && person1.getAddress().getHousesNumber() != person2.getAddress().getHousesNumber()) ;
+
+                System.out.println("this people Living On Same Street But Different Houses : " + person1.getFirstName() +
+                        " " + person1.getLastName() + " and " + person2.getFirstName() + " " + person2.getLastName());
+            }
+        }
+    }
+
+    /**
+     * Вывести список всех лиц без автомобилей (предполагая, что авто может быть null)
+     */
+
+    public static void peopleWithoutCars(List<Person> people) {
         for (Person person : people) {
-            street=person.getAddress().getStreet();
-            housesNumber=person.getAddress().getHousesNumber();
-            if (person.getAddress().getStreet()==street && person.getAddress().getHousesNumber()!=housesNumber){
-                System.out.println(person.getFirstName());
+            if (person.getCar() == null) {
+                System.out.println(person.getFirstName() +
+                        " " + person.getLastName() + " have not Car");
+            }
+        }
+    }
+
+    /**
+     * Определить количество лиц, имеющих спортивный автомобиль с мощностью более 300 л.с. +
+     * ???
+     */
+    public static void countPeopleWithPowerfulSportsCars(List<Person> people) {
+        int count = 0;
+        for (Person person : people) {
+            if (person.getCar() != null
+                    && person.getCar().getPower() > 300) {
+                count++;
+            }
+            System.out.println("People from " + person.getAddress().getCountry() + " with powerful SportsCars over 300 : " + count);
+        }
+    }
+
+    /**
+     * Вывести список лиц, чьи автомобили являются наиболее мощными в своем классе (спортивные/неспортивные).
+     */
+    public static void printPeopleWithMostPowerfulCarsByClass(List<Person> people) {
+//        Person mostPowerfulSportsCarOwner = null;
+//        Person mostPowerfulNonSportsCarOwner = null;
+//        for (Person person : people) {
+//            Car car=person.getCar();
+//            if (car!=null&& !car.isSport()&&car.getPower()>mostPowerfulNonSportsCarOwner.getCar().getPower()){
+//                mostPowerfulNonSportsCarOwner=person;
+//            }
+//            if (car.isSport()&&car.getPower()>mostPowerfulSportsCarOwner.getCar().getPower()){
+//                mostPowerfulSportsCarOwner=person;
+//            }
+//            System.out.println("People With Most Powerful Cars By Class Sport " + mostPowerfulSportsCarOwner.getFirstName()
+//                    + " " + mostPowerfulNonSportsCarOwner.getLastName());
+//        }
+        for (Person person1 : people) {
+            for (Person person2 : people) {
+                if (person1.getCar() != null && person2.getCar() != null
+                        && person1.getCar().getPower() > person2.getCar().getPower()
+                        && person1.getCar().isSport() && person2.getCar().isSport()) {
+
+                    System.out.println("PeopleWithMostPowerfulCarsByClass " + person1.getFirstName());
+
+                }
+                if (person1.getCar()!=null&&person2.getCar()!=null
+                &&person1.getCar().getPower()>person2.getCar().getPower()
+                &&!person1.getCar().isSport()&&!person2.getCar().isSport()){
+                    System.out.println("PeopleWithMostPowerfulCarsByClass not sport " + person1.getFirstName());
+
+                }
             }
         }
     }

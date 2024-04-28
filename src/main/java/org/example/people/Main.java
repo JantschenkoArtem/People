@@ -4,6 +4,7 @@ import org.example.people._class.People;
 import org.example.people._class.Person;
 import org.example.people.allMethods.AllMethods;
 import org.example.people.enams.Currency;
+import org.example.people.metods.PrintPeopleWithMostPowerfulCars;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,8 +23,23 @@ public class Main {
 
 
         System.out.println();
-        AllMethods.peopleOfStreet(People.peopleOfUSA());
-        AllMethods.peopleOfStreet(People.peopleOfGermany());
+        AllMethods.peopleOfStreetBurDifferentHouses(People.peopleOfUSA());
+        AllMethods.peopleOfStreetBurDifferentHouses(People.peopleOfGermany());
+        System.out.println();
+
+        AllMethods.peopleWithoutCars(People.peopleOfGermany());
+        AllMethods.peopleWithoutCars(People.peopleOfFrance());
+
+        System.out.println();
+        AllMethods.countPeopleWithPowerfulSportsCars(People.peopleOfFrance());
+        AllMethods.countPeopleWithPowerfulSportsCars(People.peopleOfGermany());
+        System.out.println();
+
+//        PrintPeopleWithMostPowerfulCars.peopleWithMostPowerfulCars(People.peopleOfGermany());
+
+     AllMethods.printPeopleWithMostPowerfulCarsByClass(People.peopleOfGermany());
+     AllMethods.printPeopleWithMostPowerfulCarsByClass(People.peopleOfUSA());
+     AllMethods.printPeopleWithMostPowerfulCarsByClass(People.peopleOfUK());
 
     }
 }
