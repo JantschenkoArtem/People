@@ -1,31 +1,32 @@
 package org.example.people.metods;
 
-import org.example.people._class.*;
-import org.example.people.allMetods.AllMetods;
+import org.example.people._class.People;
+import org.example.people.allMethods.AllMethods;
+import org.example.people.enams.Currency;
+import org.example.people.metods.PrintPeopleWithBalanceOver;
 
 public class Main {
     public static void main(String[] args) {
 
-        AllMetods.isNotRedAndNotSportCar(People.peopleOfUK());
-        AllMetods.isNotRedAndNotSportCar(People.peopleOfUSA());
-        AllMetods.isNotRedAndNotSportCar(People.peopleOfFrance());
-        AllMetods.isNotRedAndNotSportCar(People.peopleOfGermany());
 
-        AllMetods.averageSalaryInCountry(People.peopleOfGermany());
-        AllMetods.averageSalaryInCountry(People.peopleOfFrance());
-        AllMetods.averageSalaryInCountry(People.peopleOfUSA());
-        AllMetods.averageSalaryInCountry(People.peopleOfUK());
-
-//        FindAverageSalaryInCountry.averageSalary(People.peopleOfUSA());
-//        FindAverageSalaryInCountry.averageSalary(People.peopleOfGermany());
-//        FindAverageSalaryInCountry.averageSalary(People.peopleOfUK());
-//        FindAverageSalaryInCountry.averageSalary(People.peopleOfFrance());
-
+//        AllMethods.isNotRedAndNotSportCar(People.peopleOfUK());
+//        AllMethods.isNotRedAndNotSportCar(People.peopleOfUSA());
+//        AllMethods.isNotRedAndNotSportCar(People.peopleOfGermany());
+//        AllMethods.isNotRedAndNotSportCar(People.peopleOfFrance());
 //
-//        IsRedIsSport.IsNotRedNotSport(People.peopleOfUSA());
-//        IsRedIsSport.IsNotRedNotSport(People.peopleOfUK());
-//        IsRedIsSport.IsNotRedNotSport(People.peopleOfFrance());
-//        IsRedIsSport.IsNotRedNotSport(People.peopleOfGermany());
+//        System.out.println();
+//        AllMethods.averageSalaryInCountry(People.peopleOfFrance());
+//        AllMethods.averageSalaryInCountry(People.peopleOfGermany());
+//        AllMethods.averageSalaryInCountry(People.peopleOfUK());
+//        AllMethods.averageSalaryInCountry(People.peopleOfUSA());
+
+            AllMethods.peopleWithBalanceOver(People.peopleOfUSA(), Currency.USD,2000000);
+
+
+        IsRedIsSport.IsNotRedNotSport(People.peopleOfUSA());
+        IsRedIsSport.IsNotRedNotSport(People.peopleOfUK());
+        IsRedIsSport.IsNotRedNotSport(People.peopleOfFrance());
+        IsRedIsSport.IsNotRedNotSport(People.peopleOfGermany());
 
 //        PrintPeopleWithBalanceOver.peopleWithBalanceOver(People.peopleOfUSA(), Currency.USD,1000000);
 //        PrintPeopleWithBalanceOver.peopleWithBalanceOver(People.peopleOfUK(),Currency.GBR,100);

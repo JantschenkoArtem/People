@@ -14,7 +14,7 @@ public class People {
         ArrayList<Account> accounts=new ArrayList<>();
         Account account=new Account(Currency.USD,250_000,"ID.16.25");
         accounts.add(account);
-        Person person = new Person("Ivan", "Ivanov", new Address(Country.USA, "Wall Street", 1, 1)
+        Person person = new Person("Ivan", "Ivanov", new Address(Country.USA, "Wall Street", 2, 1)
                 , 1200, new Car(Brand.BMW, 2, true, 500, 2024, Color.BLACK, 25_000),accounts);
         Person person1 = new Person("Anna", "Ivanova", person.getAddress()
                 , 1500, new Car(Brand.BMW, 4, false, 200, 2020, Color.RED, 10_000), person.getAccounts());
